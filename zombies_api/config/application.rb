@@ -28,11 +28,11 @@ module ApiOnly
     config.api_only = true
 
     # Add GET, POST and OPTIONS to be served as a public API using Cross-Origin Resource Sharing (CORS)
-    config.middleware.insert_before 0, "Rack::Cors" do
-      allow do
-        origins '*'
-        resource '*', headers: :any, methods: [:get, :post, :options]
-      end
-    end
+    # config.middleware.insert_before 0, "Rack::Cors" do
+    #   allow do
+    #     origins '*'
+    #     resource '*', headers: :any, methods: [:get, :post, :options]
+    #   end
+    # end
   end
 end
